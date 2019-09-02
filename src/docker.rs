@@ -188,9 +188,9 @@ fn image(toml: Option<&Toml>, target: &Target) -> Result<String> {
     let version = env!("CARGO_PKG_VERSION");
 
     let image = if version.contains("dev") || version.contains("alpha") {
-        format!("rustembedded/cross:{}", triple)
+        format!("reitermarkus/cross:{}", triple)
     } else {
-        format!("rustembedded/cross:{}-{}", triple, version)
+        format!("reitermarkus/cross:{}-{}", triple, version)
     };
 
     Ok(image)
